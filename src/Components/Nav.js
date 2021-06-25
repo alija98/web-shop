@@ -1,6 +1,6 @@
 import React from "react";
 import { FiShoppingCart } from "react-icons/fi";
-import "./Nav.css";
+import "../CSS/Nav.css";
 import { Link } from "react-router-dom";
 
 function Nav() {

@@ -1,9 +1,9 @@
 import "./App.css";
-import Nav from "./Nav";
-import AboutUs from "./AboutUs";
-import Home from "./Home";
-import Error from "./Error";
-import Cart from "./Cart";
+import Nav from "./Components/Nav";
+import AboutUs from "./Pages/AboutUs";
+import Home from "./Pages/Home";
+import Error from "./Pages/Error";
+import Cart from "./Pages/Cart";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
