@@ -16,7 +16,7 @@ function Filter() {
         Laptops
       </button>
       <button
-        onClick={() => changeFilterState("gadgets")}
+        onClick={() => changeFilterState("gadget")}
         className="filter__item"
       >
         Gadgets

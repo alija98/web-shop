@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Filter from "../Components/FilterMenu";
 import MenuItem from "../Components/MenuItem";
 import { useGlobalContext } from "../context";
 
 function Home() {
-  const { filteredItems, filterState, setfilterState } = useGlobalContext();
+  const { filteredItems, filterState } = useGlobalContext();
+  const [items, setItems] = useState(filteredItems);
 
-  console.log(filteredItems);
+  useEffect(() => {
+    setItems(filteredItems);
+    console.log(items);
+  }, [filterState]);
+
   return (
     <section className="main__section>">
       <Filter />
 
       <div className="item__menu">
-        {filteredItems.map((item) => {
+        {items.map((item) => {
           return (
             <MenuItem
               key={item.key}

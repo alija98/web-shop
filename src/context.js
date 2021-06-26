@@ -4,21 +4,25 @@ import { items } from "./Data";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [filteredItems, setFilteredItem] = useState(items);
+  const [filteredItems, setFilteredItems] = useState(items);
   const [filterState, setFilterState] = useState("all");
 
   const changeFilterState = (state) => {
     setFilterState(state);
   };
 
-  const showData = (filterState) => {};
+  const showData = (filterState) => {
+    setFilteredItems(items.filter((item) => item.tag === filterState));
+  };
 
   useEffect(() => {
-    console.log(filterState);
+    showData("laptop");
   }, [filterState]);
 
   return (
-    <AppContext.Provider value={{ filteredItems, changeFilterState }}>
+    <AppContext.Provider
+      value={{ filteredItems, changeFilterState, filterState }}
+    >
       {children}
     </AppContext.Provider>
   );

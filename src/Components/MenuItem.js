@@ -7,7 +7,7 @@ function MenuItem({ id, name, image, price }) {
         <img src={image}></img>
       </div>
       <h1>{name}</h1>
-      <h3>{price}</h3>
+      <h3>{price}$</h3>
     </div>
   );
 }
