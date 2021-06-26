@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import Filter from "../Components/FilterMenu";
 import MenuItem from "../Components/MenuItem";
 import { useGlobalContext } from "../context";
+import { items } from "../Data";
 
 function Home() {
-  const { filteredItems, filterState } = useGlobalContext();
-  const [items, setItems] = useState(filteredItems);
+  const [filteredItems, setFilteredItems] = useState(items);
+  const { filterState } = useGlobalContext();
 
   useEffect(() => {
-    setItems(filteredItems);
-    console.log(items);
+    setFilteredItems(items.filter((item) => item.tag === filterState));
   }, [filterState]);
 
   return (
@@ -17,7 +17,7 @@ function Home() {
       <Filter />
 
       <div className="item__menu">
-        {items.map((item) => {
+        {filteredItems.map((item) => {
           return (
             <MenuItem
               key={item.key}
