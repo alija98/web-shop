@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Filter from "../Components/FilterMenu";
 import MenuItem from "../Components/MenuItem";
 import { useGlobalContext } from "../context";
-import { items } from "../Data";
 
 function Home() {
-  const [filteredItems, setFilteredItems] = useState(items);
-  const { filterState } = useGlobalContext();
-
-  useEffect(() => {
-    setFilteredItems(items.filter((item) => item.tag === filterState));
-  }, [filterState]);
+  const { filteredItems } = useGlobalContext();
 
   return (
     <section className="main__section>">
@@ -20,11 +15,13 @@ function Home() {
         {filteredItems.map((item) => {
           return (
             <MenuItem
-              key={item.key}
+              key={item.id}
               image={item.image}
               name={item.name}
               price={item.price}
+              id={item.id}
             ></MenuItem>
+            // </Link>
           );
         })}
       </div>

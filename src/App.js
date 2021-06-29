@@ -4,6 +4,7 @@ import AboutUs from "./Pages/AboutUs";
 import Home from "./Pages/Home";
 import Error from "./Pages/Error";
 import Cart from "./Pages/Cart";
+import SingleItem from "./Pages/SingleItem";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="/item/:id">
+          <SingleItem />
         </Route>
         <Route path="*">
           <Error />

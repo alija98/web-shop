@@ -68,9 +68,9 @@ export const items = [
   {
     id: 9,
     image:
-      "https://m.media-amazon.com/images/I/71gzlKauNQL._AC_UY327_QL65_.jpg",
-    name: "Hisense 40-Inch Class H4 Series LED Roku Smart TV",
-    price: "249.99",
+      "https://images-na.ssl-images-amazon.com/images/I/61qDaY5NTkL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+    name: "Wireless Earbuds with Immersive Sound True 5.0 Bluetooth ",
+    price: "25.99",
     tag: "gadget",
   },
   {
@@ -82,3 +82,28 @@ export const items = [
     tag: "gadget",
   },
 ];
+
+export function compareAsc(a, b) {
+  const a_price = parseInt(a.price);
+  const b_price = parseInt(b.price);
+  if (a_price < b_price) {
+    return -1;
+  }
+  if (a_price > b_price) {
+    return 1;
+  }
+}
+export function compareDsc(a, b) {
+  const a_price = parseInt(a.price);
+  const b_price = parseInt(b.price);
+  if (a_price < b_price) {
+    return 1;
+  }
+  if (a_price > b_price) {
+    return -1;
+  }
+}
+
+export const sortAsc = items.slice(0).sort(compareAsc);
+
+export const sortDsc = items.slice(0).sort(compareDsc);

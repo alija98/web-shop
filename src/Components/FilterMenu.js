@@ -1,32 +1,63 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/Home.css";
 import { useGlobalContext } from "../context";
+import { filters, sortOptions } from "../Filters";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Filter() {
-  const [buttonState, setButtonState] = useState("");
-  const { changeFilterState } = useGlobalContext();
+  const { showData } = useGlobalContext();
+  const [sortDisplay, setSortDisplay] = useState(false);
+  const [sortState, setSortState] = useState("PRICE HIGH TO LOW");
+  const [filterState, setFilterState] = useState("all");
+
+  //console.log(sortState, filterState);
 
   return (
     <div className="filter__section">
-      <button
-        onClick={() => changeFilterState("tv")}
-        className={`filter__item${buttonState}`}
+      {filters.map(({ filterName, filterOption, id }) => {
+        return (
+          <button
+            key={id}
+            onClick={() => {
+              //   setFilterState(filterOption);
+              showData(filterOption, null);
+            }}
+            className="filter__item"
+          >
+            {filterName}
+          </button>
+        );
+      })}
+      <div
+        onClick={() => {
+          setSortDisplay(!sortDisplay);
+        }}
+        className="sort"
       >
-        TVs
-      </button>
-      <button
-        onClick={() => changeFilterState("laptop")}
-        className={`filter__item${buttonState}`}
-      >
-        Laptops
-      </button>
-      <button
-        onClick={() => changeFilterState("gadget")}
-        className={`filter__item${buttonState}`}
-      >
-        Gadgets
-      </button>
-      <button className="filter__item">Sort</button>
+        <span>SORT: {sortState}</span>
+        <span>
+          <IoIosArrowDown></IoIosArrowDown>
+        </span>
+        <div className={sortDisplay ? "sort__body" : "sort__body__active"}>
+          <div className="sort__heading"></div>
+          <div className="sort__ul">
+            <ul>
+              {sortOptions.map((sort) => {
+                return (
+                  <li
+                    onClick={() => {
+                      setSortState(sort.filterName);
+                      showData(null, sort.filterOption);
+                    }}
+                  >
+                    {sort.filterName}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
