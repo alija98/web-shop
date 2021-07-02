@@ -7,6 +7,7 @@ export const items = [
     name: "Lenovo IdeaPad 3 11 Chromebook",
     price: "219.99",
     tag: "laptop",
+    amount: 1,
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ export const items = [
     name: "Lenovo IdeaPad Flex 5 ",
     price: "681.00",
     tag: "laptop",
+    amount: 1,
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const items = [
     name: "Acer Aspire 5",
     price: "388.12",
     tag: "laptop",
+    amount: 1,
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ export const items = [
     name: "Razer Blade 15",
     price: "1149.99",
     tag: "laptop",
+    amount: 1,
   },
   {
     id: 5,
@@ -39,6 +43,7 @@ export const items = [
     name: "SAMSUNG 50-Inch Class Crystal UHD AU8000 ",
     price: "1100",
     tag: "tv",
+    amount: 1,
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ export const items = [
     name: "Toshiba 43LF421U21 43-inch Smart HD 1080p TV",
     price: "269.99",
     tag: "tv",
+    amount: 1,
   },
 
   {
@@ -56,6 +62,7 @@ export const items = [
     name: "SAMSUNG QN32Q50RAFXZA 32-inch QLED 4K 32Q50",
     price: "330.00",
     tag: "tv",
+    amount: 1,
   },
   {
     id: 8,
@@ -64,6 +71,7 @@ export const items = [
     name: "Hisense 40-Inch Class H4 Series LED Roku Smart TV",
     price: "249.99",
     tag: "tv",
+    amount: 1,
   },
   {
     id: 9,
@@ -72,6 +80,7 @@ export const items = [
     name: "Wireless Earbuds with Immersive Sound True 5.0 Bluetooth ",
     price: "25.99",
     tag: "gadget",
+    amount: 1,
   },
   {
     id: 10,
@@ -80,6 +89,7 @@ export const items = [
     name: "Wireless Keyboard and Mouse Combo, TopMate 2.4G Backlit Rechargeable",
     price: "44.77",
     tag: "gadget",
+    amount: 1,
   },
 ];
 

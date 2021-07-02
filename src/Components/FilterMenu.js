@@ -8,7 +8,6 @@ function Filter() {
   const { showData } = useGlobalContext();
   const [sortDisplay, setSortDisplay] = useState(false);
   const [sortState, setSortState] = useState("PRICE HIGH TO LOW");
-  const [filterState, setFilterState] = useState("all");
 
   //console.log(sortState, filterState);
 
@@ -20,7 +19,7 @@ function Filter() {
             key={id}
             onClick={() => {
               //   setFilterState(filterOption);
-              showData(filterOption, null);
+              showData(filterOption, sortState);
             }}
             className="filter__item"
           >
@@ -45,6 +44,7 @@ function Filter() {
               {sortOptions.map((sort) => {
                 return (
                   <li
+                    key={sort.id}
                     onClick={() => {
                       setSortState(sort.filterName);
                       showData(null, sort.filterOption);

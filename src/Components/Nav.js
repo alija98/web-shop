@@ -2,8 +2,10 @@ import React from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import "../CSS/Nav.css";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context";
 
 function Nav() {
+  const { amount } = useGlobalContext();
   return (
     <div className="nav">
       <div className="nav__container">
@@ -23,7 +25,7 @@ function Nav() {
             <Link to="/cart">
               <FiShoppingCart className="shopping_cart" />
             </Link>
-            <div className="cart__info">1</div>
+            <div className="cart__info">{amount}</div>
           </div>
         </div>
       </div>
