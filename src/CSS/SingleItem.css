@@ -7,6 +7,7 @@
 }
 .img_container {
   width: 60%;
+  height: 400px;
 }
 .img_container img {
   width: 100%;
@@ -53,4 +54,20 @@
   clip-path: none;
   width: 100%;
   transition: width ease-in-out 250ms;
+}
+.back__home {
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  margin-top: 60px;
+  background-color: #edededb4;
+  width: 20%;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 4px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #464545;
+  padding: 10px 0;
 }

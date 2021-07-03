@@ -19,7 +19,7 @@ function Filter() {
             key={id}
             onClick={() => {
               //   setFilterState(filterOption);
-              showData(filterOption, sortState);
+              showData(filterName, null);
             }}
             className="filter__item"
           >

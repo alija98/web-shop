@@ -22,7 +22,7 @@ function CartItem({ image, name, price, id, amount }) {
         <span onClick={() => increase(id)} className="arrow_up">
           <IoIosArrowUp />
         </span>
-        <span>{amount}</span>
+        <span className="amount">{amount}</span>
         <span onClick={() => decrease(id)}>
           <IoIosArrowDown className="arrow_down" />
         </span>

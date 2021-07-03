@@ -131,3 +131,13 @@
 .img__container img:hover {
   transform: scale(1.02);
 }
+.about_us {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+.about_us p {
+  max-width: 100ch;
+  margin-top: 100px;
+}

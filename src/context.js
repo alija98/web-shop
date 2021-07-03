@@ -36,10 +36,11 @@ const AppProvider = ({ children }) => {
   const showData = (filterState, sortState) => {
     //filter
 
-    if (filterState === "all") {
+    if (filterState === "all" && !sortState) {
       console.log("all");
       setFilteredItems(items);
     }
+
     if (!sortState && filterState && filterState !== "all") {
       console.log("tvs");
       setFilteredItems(items.filter((item) => item.tag === filterState));

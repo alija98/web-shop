@@ -16,7 +16,9 @@ function Nav() {
         </div>
         <div className="nav__menu">
           <ul className="nav__list">
-            <li>Shop</li>
+            <Link to="/">
+              <li>Shop</li>
+            </Link>
             <Link to="/about">
               <li>About us</li>
             </Link>
