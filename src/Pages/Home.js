@@ -6,7 +6,6 @@ import { useGlobalContext } from "../context";
 
 function Home() {
   const { filteredItems } = useGlobalContext();
-  console.log('hahaha',filteredItems)
   return (
     <section className="main__section>">
       <Filter />

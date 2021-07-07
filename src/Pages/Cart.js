@@ -3,11 +3,19 @@ import { useGlobalContext } from "../context";
 import { items } from "../Data";
 import CartItem from "../Components/CartItem";
 import "../CSS/Cart.css";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const { cart, total, clearCart, id } = useGlobalContext();
   if (cart.length === 0) {
-    return <div className="no_items">Your cart is empty</div>;
+    return (
+      <>
+        <div className="no_items">Your cart is empty</div>
+        <Link to="/">
+          <button className="back__home">BacK to shopping</button>
+        </Link>
+      </>
+    );
   }
   return (
     <section className="cart">

@@ -1,4 +1,3 @@
-import { act } from "react-dom/cjs/react-dom-test-utils.production.min";
 import { items } from "./Data";
 
 const reducer = (state, action) => {
