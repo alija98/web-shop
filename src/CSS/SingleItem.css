@@ -71,3 +71,28 @@
   border: 1px solid #464545;
   padding: 10px 0;
 }
+@media screen and (max-width: 800px) {
+  .singleItem {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+  }
+  .img_container {
+    width: 80%;
+  }
+  .single_item_container h1 {
+    font-size: 20px;
+  }
+  .single_item_container h2 {
+    font-size: 20px;
+  }
+  .single_item_container {
+    padding: 0;
+  }
+  .add_cart {
+    width: 80%;
+  }
+  .back__home {
+    margin: 50px 0;
+  }
+}

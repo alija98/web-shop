@@ -115,3 +115,27 @@
 .remove-btn {
   user-select: none;
 }
+
+@media screen and (max-width: 800px) {
+  .cart {
+    width: 85%;
+  }
+  .remove-btn {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cart {
+    width: 90%;
+  }
+  .cart_item_img img {
+    width: 150px;
+    height: 120px;
+  }
+
+  .cart_item_container h3,
+  .cart_item_container h4 {
+    font-size: 18px;
+  }
+}
