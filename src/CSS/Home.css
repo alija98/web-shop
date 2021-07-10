@@ -248,7 +248,7 @@
 
   @media screen and (max-width: 400px) {
     .img__container {
-      height: 230px;
+      height: 210px;
     }
     .item__container {
       margin-top: 240px !important;
