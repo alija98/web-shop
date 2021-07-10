@@ -2,18 +2,33 @@
   padding: 15px 40px;
   background-color: black;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 20;
 }
 .nav__container {
   margin: 0 auto;
-  width: 85%;
   display: flex;
   justify-content: space-between;
+  flex: 1;
+}
+.hamburger__menu {
+  flex: 1;
+}
+
+.nav__logo {
+  flex: 1;
 }
 a {
   color: white;
   text-decoration: none;
 }
 .nav__menu {
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 0 10px;
@@ -21,8 +36,9 @@ a {
 .nav__list {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   padding: 0 20px;
-  width: 250px;
+  flex: 4;
 }
 .nav__list li {
   padding-right: 25px;
@@ -40,8 +56,9 @@ a {
 
 .nav__cart {
   position: relative;
-  display: flex;
   align-items: center;
+  flex: 1;
+  text-align: right;
 }
 .cart__info {
   position: absolute;
@@ -72,16 +89,17 @@ a {
     width: 50%;
     font-size: 20px;
   }
-
+  .nav__logo {
+    display: flex;
+    justify-content: center;
+  }
   .nav {
     display: flex;
     align-items: center;
     width: 100%;
     padding: 15px 20px;
   }
-  .nav__logo {
-    margin-left: 42px;
-  }
+
   .sidebar {
     display: block;
     transition: ease-in 400ms all;
@@ -115,22 +133,31 @@ a {
 }
 
 @media screen and (max-width: 800px) {
-  .nav__logo {
-    margin-left: 29px;
+  .nav__logo h2 {
+    font-size: 22px;
+  }
+  .shopping_cart {
+    font-size: 22px;
+  }
+  .hamburger__menu {
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 700px) {
-  .nav__logo {
-    margin-left: 22px;
-  }
 }
 @media screen and (max-width: 600px) {
-  .nav__logo {
-    margin-left: 14px;
+  .nav__logo h2 {
+    font-size: 20px;
+  }
+  .shopping_cart {
+    font-size: 22px;
+  }
+  .hamburger__menu {
+    font-size: 20px;
   }
 }
-@media screen and (max-width: 500px) {
-  .nav__logo {
-    margin-left: 0px;
+@media screen and (max-width: 400px) {
+  .nav__logo h2 {
+    font-size: 18px;
   }
 }

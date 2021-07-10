@@ -14,12 +14,12 @@ function Nav() {
         <span onClick={() => changeSidebarShow()} className="hamburger__menu">
           <GiHamburgerMenu />
         </span>
+        <div className="nav__logo">
+          <Link to="/">
+            <h2>Web shop</h2>
+          </Link>
+        </div>
         <div className="nav__container">
-          <div className="nav__logo">
-            <Link to="/">
-              <h2>Web shop</h2>
-            </Link>
-          </div>
           <div className="nav__menu">
             <ul className="nav__list">
               <Link to="/">

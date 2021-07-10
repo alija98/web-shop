@@ -96,3 +96,34 @@
     margin: 50px 0;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .singleItem {
+    width: 90%;
+  }
+
+  .img_container {
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .img_container {
+    height: 320px;
+  }
+  .single_item_container h1 {
+    font-size: 18px;
+  }
+  .single_item_container h2 {
+    font-size: 18px;
+  }
+  .single_item_container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .img_container {
+    height: 260px;
+  }
+}
