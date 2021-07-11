@@ -94,17 +94,20 @@ a {
     justify-content: center;
   }
   .nav {
+    position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     padding: 15px 20px;
+    z-index: 1;
   }
 
   .sidebar {
     display: block;
     transition: ease-in 400ms all;
     position: fixed;
-    top: 0;
+
+    top: 0px;
     left: 0;
     width: 70%;
     background-color: white;
