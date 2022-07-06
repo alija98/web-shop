@@ -39,27 +39,23 @@ const AppProvider = ({ children }) => {
 
   const showData = (filterState, sortState) => {
     //filter
-    console.log("state", filterState);
-    console.log("sort", sortState);
+
 
     if (filterState === "all" || (filterState === "all" && sortState)) {
-      console.log("all");
+   
       setFilteredItems(items);
       sortFunction(items, sortState);
     }
     if (!sortState && filterState && filterState !== "all") {
-      console.log("govno jedno");
+   
       setFilteredItems(items.filter((item) => item.tag === filterState));
-      console.log(
-        "kako bi trebalo biti",
-        items.filter((item) => item.tag === filterState)
-      );
+
     }
     //sort
 
     if (sortState && !filterState) {
       if (sortState === "PRICE HIGH TO LOW") {
-        console.log("sortianje,", filteredItems);
+       
         setFilteredItems(filteredItems.slice(0).sort(compareDsc));
       }
       if (sortState === "PRICE LOW TO HIGH") {
@@ -67,12 +63,9 @@ const AppProvider = ({ children }) => {
       }
     }
     if (sortState && filterState && filterState !== "all") {
-      console.log("uslo je u najgore", sortState, filterState);
+    
       setFilteredItems(items.filter((item) => item.tag === filterState));
-      console.log(
-        "itemi bi trebali biti",
-        items.filter((item) => item.tag === filterState)
-      );
+
 
       sortFunction(
         items.filter((item) => item.tag === filterState),
@@ -83,13 +76,13 @@ const AppProvider = ({ children }) => {
 
   const sortFunction = (data, sortOption) => {
     if (sortOption === "PRICE HIGH TO LOW") {
-      console.log("sortopciji dodju", data);
+     
       setFilteredItems(data.slice(0).sort(compareDsc));
-      console.log("sortianje opadanje,", filteredItems);
+  
     }
     if (sortOption === "PRICE LOW TO HIGH") {
       setFilteredItems(data.slice(0).sort(compareAsc));
-      console.log("sortianje rastenje,", filteredItems);
+
     }
   };
   return (
